@@ -48,7 +48,7 @@
 
 Summary:        XUL Runtime for Gecko Applications
 Name:           %{shortname}10
-Version:        10.0.1
+Version:        10.0.2
 Release:        1%{?pre_tag}%{?dist}.R
 URL:            http://developer.mozilla.org/En/XULRunner
 License:        MPLv1.1 or GPLv2+ or LGPLv2+
@@ -426,6 +426,9 @@ fi
 #---------------------------------------------------------------------
 
 %changelog
+* Sat Feb 18 2012 Arkady L. Shane <ashejn@russianfedora.ru> - 10.0.2-1.R
+- update to 10.0.2
+
 * Sun Feb 12 2012 Arkady L. Shane <ashejn@russianfedora.ru> - 10.0.1-1.R
 - update to 10.0.1
 
