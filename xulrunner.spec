@@ -49,7 +49,7 @@
 Summary:        XUL Runtime for Gecko Applications
 Name:           %{shortname}10
 Version:        10.0.1
-Release:        1%{?pre_tag}%{?dist}.R
+Release:        2%{?pre_tag}%{?dist}.R
 URL:            http://developer.mozilla.org/En/XULRunner
 License:        MPLv1.1 or GPLv2+ or LGPLv2+
 Group:          Applications/Internet
@@ -83,7 +83,7 @@ Patch43:        mozilla-file.patch
 # Needed to detect/use libvpx-1.0.0
 # https://bugzilla.mozilla.org/show_bug.cgi?id=722127
 Patch44:	mozilla-722127.patch
-
+Patch45:        mozilla-727401.patch
 
 # ---------------------------------------------------
 
@@ -205,6 +205,7 @@ sed -e 's/__RPM_VERSION_INTERNAL__/%{gecko_dir_ver}/' %{P:%%PATCH0} \
 %patch42 -p1 -b .706724
 %patch43 -p1 -b .file
 %patch44 -p2 -b .vpx1.0.0
+%patch45 -p1 -b .727401
 
 %{__rm} -f .mozconfig
 %{__cp} %{SOURCE10} .mozconfig
@@ -426,6 +427,9 @@ fi
 #---------------------------------------------------------------------
 
 %changelog
+* Sun Feb 19 2012 Arkady L. Shane <ashejn@russianfedora.ru> - 10.0.1-2.R
+- fix mozilla #727401
+
 * Sun Feb 12 2012 Arkady L. Shane <ashejn@russianfedora.ru> - 10.0.1-1.R
 - update to 10.0.1
 
